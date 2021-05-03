@@ -8,15 +8,15 @@ build:
   local:
     push: false
   artifacts:
-    - image: stephengrider/client
-      context: client
+    - image: thecrossart/client1
+      context: client1
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
           - src: 'src/**/*.js'
             dest: .
-    - image: stephengrider/comments
+    - image: thecrossart/comments
       context: comments
       docker:
         dockerfile: Dockerfile
@@ -24,7 +24,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/event-bus
+    - image: thecrossart/event-bus
       context: event-bus
       docker:
         dockerfile: Dockerfile
@@ -32,7 +32,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/moderation
+    - image: thecrossart/moderation
       context: moderation
       docker:
         dockerfile: Dockerfile
@@ -40,7 +40,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/posts
+    - image: thecrossart/posts
       context: posts
       docker:
         dockerfile: Dockerfile
@@ -48,7 +48,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/query
+    - image: thecrossart/query
       context: query
       docker:
         dockerfile: Dockerfile
